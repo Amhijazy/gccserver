@@ -1,0 +1,29 @@
+.nav-wrapper{
+  padding: 30px 30px;
+}
+.nav-wrapper a{
+  font-size: 35px;
+  margin-left: 50px;
+}
+.nav-wrapper h1{
+  font-size: 35px;
+}
+.nav-wrapper h5{
+  font-size: 15px;
+}
+.btn:hover{
+  box-shadow: 3px 5px 5px #000000;
+  transition: 0.3s;
+}
+.main-content{
+  margin-left: 300px;
+}
+.main-title{
+  padding: 50px 100px 33px 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-content {
+    margin-left: 0px;
+  }
+}

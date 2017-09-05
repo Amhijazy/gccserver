@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Workspace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css\libs\icons.css" rel="stylesheet">
+    <link href="css\libs\materialize.css" rel="stylesheet">
+    <link href="css\mystyles.css" rel="stylesheet">
+    <link href="css\dsaparser.css" rel="stylesheet">
+  </head>
+  <body class="grey lighten-3">
+
+    <div w3-include-html="assets\html\sidebar.html"></div>
+    
+    <div class="main-content">
+      <div class="card card-large">
+        <div class="card-content">
+            
+          <h3>DSA Local Parser</h3>
+          <h4>Installable Version</h4>
+          <p>The DSA Local parser installable version allows you to install parser on your Windows operating system once, then you can right-click any DSA file and select Send To > Local DSA Parser to parse it.</p>
+          <h5>Installation Steps:</h5>
+          <ul class= "circle">
+            <li>First, Download the <a href="assets/dsaparserfiles/dsa-local.exe">dsa-local.exe</a> installer</li>
+            <li>Once it is downloaded, double click the installer to start the installation</li>
+            <li>When the installation is successful, it will show you the tools version number</li>
+            <li>If the installation didn't go through for any reason, contact bcford@us.ibm.com</li>
+          </ul>
+          <h5>Usage:</h5>
+          <ul>
+            <li>Right-click the DSA file that you need to parse and select Send To > Local DSA Parser</li>
+            <li>You will be presented by a number of options, select the one you need</li>
+          </ul>
+          <h3>Batch-Like Portable Version</h3>
+          <p>This local parser version is portable and doesn't need installation. It allows you to choose where to save the parsed DSA html files as well as which DSA version is used for parsing.</p>
+          <h5>Installation Steps:</h5>
+          <ul>
+            <li>Download the <a href="assets/dsaparserfiles/DSA local parse v2.zip">DSA local parse v2.zip</a></li>
+            <li>Unzip the downloaded folder</li>
+          </ul>
+          <h5>Usage:</h5>
+          <ul>
+            <li>Open the extracted folder</li>
+            <li>Double-click the DSA local parser v2.exe</li>
+            <li>Follow the batch file instructions</li>
+          </ul>
+        </div>
+      </div>
+    </div>  
+    
+    
+  </body>
+  <script type="text/javascript" src="js\libs\jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js\libs\materialize.js"></script>
+  <script type="text/javascript" src="js\w3.js"></script>
+  <script>w3.includeHTML();</script>
+  
+</html>

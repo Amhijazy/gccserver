@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Workspace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css\libs\icons.css" rel="stylesheet">
+    <link href="css\libs\materialize.css" rel="stylesheet">
+    <link href="css\mystyles.css" rel="stylesheet">
+    <link href="css\quicklinks.css" rel="stylesheet">
+  </head>
+  <body class="grey lighten-3">
+
+    <div w3-include-html="assets/html/sidebar.html"></div>
+    
+    <div class="main-content">
+
+      <div class="card card-large">
+        
+        <div class="card-content">
+          <div class="input-field col s6">
+            <input placeholder="Filter Links" id="filterLinks" type="text" class="validate" onkeyup="filterlinks()"> 
+          </div>
+          
+          
+        <div id="links" class="row">
+                 
+        </div>
+          
+          
+        
+      </div>
+    </div>
+
+  </div>
+    
+  </body>
+  <script type="text/javascript" src="js\libs\jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js\libs\materialize.js"></script>
+  <script type="text/javascript" src="js\w3.js"></script>
+  <script type="text/javascript" src="js\quicklinks.js"></script>
+  
+</html>
