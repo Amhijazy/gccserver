@@ -1,49 +1,11 @@
-.header{
-    background-color: rgba(30,136,229,1);;
-    color: #fff;
+.card{
+    width: 95%;
+    margin: 50px auto;
 }
-
-.search-box{
-    border: 1px solid #999;
-    border-radius: 5px;
-    margin: 10px 0px 20px 0px;
-}
-
 form{
-    width: 40%;
+    width: 50%;
+    margin: auto;
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to { 
-    transform: rotate(360deg);
-  }
-}
-
-.fa-spinner{
-    animation:0.8s rotate infinite linear; 
-}
-
-.well{
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-    width: 40%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-
-th{
-    border-radius: 5px 5px 0px 0px;
-}
-
-.table-striped > tbody > tr:nth-of-type(2n+1){
-    background-color: #fff;
-}
-
-.table-striped > tbody > tr:nth-of-type(2n){
-    background-color: #eee;
+button:hover{
+    background-color: black;
 }

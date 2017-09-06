@@ -14,69 +14,25 @@
     <div w3-include-html="assets/html/sidebar.html"></div>
     
     <div class="main-content">
-        <div class="container">
-            <div class="search-box">
-              <table class="table table-striped table-condensed">
-                <thead>
-                  <th class="header">
-                    Please enter the Machine Type and Serial Number of the machine you seek.
-                  </th>
-                </thead>
-              </table>
-              
-              <form action="" onsubmit="javascript:searchWarranty();return false;" class="center-block">
-                <fieldset>
-                  <div class="form-group">
-                      <input type="text" id="mt" placeholder="Machine Type" class="form-control">
+        
+        <div class="card card-large">
+            <div class="card-content">
+              <form>
+                  <p>Please insert the machine type and serial number below:</p>
+                  <div class="input-field">
+                    <input id="machineType" type="text">
+                    <label for="machineType">Machine Type</label>
                   </div>
-                  <div class="form-group">
-                      <input type="text" id="sn" placeholder="Serial Number" class="form-control">
+                  <div class="input-field">
+                      <input id="serialNumber" type="text">
+                      <label for="serialNumber">Serial Number</label>
                   </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn blue darken-1">Search &nbsp;<i class="fa fa-spinner" aria-hidden="true"></i></button>
-                  </div>
-                </fieldset>
+                  <button type="submit" class="btn btn-large blue darken-1">Search</button>
               </form>
-        
-              <div class="well well-sm"></div>
+
             </div>
-            <table class="table table-striped table-condensed" id="machineInfoTable">
-              <thead>
-                <th class="header" colspan="4">General Machine Information</th>
-              </thead>
-              <tbody id="machineInfo">
-              </tbody>
-            </table>
-            <table class="table table-striped table-condensed" id="warrantyInfoTable">
-              <thead>
-                <th class="header" colspan="3">Warranty and Service Information</th>
-              </thead>
-              <tbody id="warrantyInfo">
-              </tbody>
-            </table>
-            <table class="table table-striped table-condensed" id="upmaInfoTable">
-              <thead>
-                <th class="header" colspan="3">Warranty Upgrades and Maintenance Agreements</th>
-              </thead>
-              <tbody id="upmaInfo">
-              </tbody>
-            </table>
-            <table class="table table-striped table-condensed" id="partInfoTable">
-              <thead>
-                <th class="header" colspan="4">Parts Information</th>
-              </thead>
-              <tbody id="partInfo">
-              </tbody>
-            </table>
-            <table class="table table-striped table-condensed" id="aodInfoTable">
-              <thead>
-                <th class="header" colspan="2">AOD Info</th>
-              </thead>
-              <tbody id="aodInfo">
-              </tbody>
-            </table>
-          </div>
-        
+        </div>
+
     </div>
     
   </body>
