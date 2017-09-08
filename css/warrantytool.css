@@ -4,8 +4,11 @@
 }
 form{
     width: 50%;
-    margin: auto;
+    margin: 20px auto;
 }
-button:hover{
-    background-color: black;
+.table-heading{
+    background-color: rgba(30,136,229,0.5);
+}
+.info{
+    display: none;
 }

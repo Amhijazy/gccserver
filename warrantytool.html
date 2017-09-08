@@ -17,7 +17,10 @@
         
         <div class="card card-large">
             <div class="card-content">
-              <form>
+
+              <!-- Input form-->
+
+              <form action="" onsubmit="return searchWarranty()"> 
                   <p>Please insert the machine type and serial number below:</p>
                   <div class="input-field">
                     <input id="machineType" type="text">
@@ -27,8 +30,94 @@
                       <input id="serialNumber" type="text">
                       <label for="serialNumber">Serial Number</label>
                   </div>
-                  <button type="submit" class="btn btn-large blue darken-1">Search</button>
+                  <button type="submit" class="btn btn-large blue darken-1" id="search">Search</button>
               </form>
+
+              <!-- machine info table-->
+
+              <table class="striped info" id="machineinfo">
+                <thead>
+                  <tr>
+                    <th colspan ="4" class="table-heading">General machine information</th>
+                  </tr>
+                  <tr>
+                      <th>Type</th>
+                      <th>Model</th>
+                      <th>Serial</th>
+                      <th>Build date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+              <!-- warranty and service info table-->
+
+              <table class="striped info" id="warrantyinfo">
+                <thead>
+                  <tr>
+                    <th colspan="3" class="table-heading">Warranty and Service Information</th>
+                  </tr>
+                  <tr>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th>SDF</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+              <!-- warranty upgrade table-->
+
+              <table class="striped info" id="warrantyupgrade">
+                <thead>
+                  <tr>
+                    <th colspan="3" class="table-heading">Warranty Upgrades and Maintenance Agreements</th>
+                  </tr>
+                  <tr>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th>SDF</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+              <!-- parts information info table-->
+
+              <table class="striped info" id="partsinfo">
+                <thead>
+                  <tr>
+                    <th colspan="4" class="table-heading">Parts Information</th>
+                  </tr>
+                  <tr>
+                      <th>Part Number</th>
+                      <th>FRU Number</th>
+                      <th colspan="2">FRU Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+
+              <!-- AOD info table-->
+
+              <table class="striped info" id="aodinfo">
+                <thead>
+                  <tr>
+                    <th colspan="3" class="table-heading">AOD Info</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
 
             </div>
         </div>
