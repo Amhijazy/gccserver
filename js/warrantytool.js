@@ -65,7 +65,7 @@ populate.aodInfo = function(xml){
     for (var i=0;i<aodInfoList.length;i++) {
         var aodDesc = $(aodInfoList[i]).find('aodDescription').text();
         var aodType = $(aodInfoList[i]).find('aodType').text();
-        text += "<tr><td>"+aodType+"</td><td colspan='2'>"+aodDesc+"</td></tr>";
+        text += "<tr><td>"+aodType+"</td><td colspan='3'>"+aodDesc+"</td></tr>";
     }
     $('#aodinfo > tbody').html('');
     $('#aodinfo > tbody').html(text);
@@ -75,14 +75,29 @@ populate.aodInfo = function(xml){
 
 
 var validate = {};
-validate.mt = function(){};
-validate.sn = function(){};
+validate.mt = function(mt){
+    var mtRegxp = /^([a-zA-Z0-9_-]){4}$/;
+    if (mt !== mtRegxp){
+        console.log("invalid mt");
+        return false;
+    }
+    return true;
+};
+validate.sn = function(sn){
+    var snRegxp = /^([a-zA-Z0-9_-]){7,8}$/;
+    if (sn !== snRegxp){
+        console.log("invalid sn");
+        return false;
+    }
+    return true;
+};
 
 // onsubmit function
 function searchWarranty() {
     mt = $('#machineType').val();
     sn = $('#serialNumber').val();
-    // validate fields
+    validate.mt(mt);
+    validate.sn(sn);
     // populate tables
     populate.allTables(mt,sn);
     return false;
