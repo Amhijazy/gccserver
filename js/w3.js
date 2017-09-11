@@ -398,3 +398,8 @@ w3.displayObject = function (id, data) {
 
 // Start custom script
 w3.includeHTML();
+
+// Initialize Tooltips
+$(document).ready(function(){
+  $('.tooltipped').tooltip({delay: 50});
+});

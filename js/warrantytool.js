@@ -6,6 +6,7 @@ populate.allTables = function(mt,sn){
         var text = data;
         var parser = new DOMParser();
         var xmlDoc = parser.parseFromString(text,"text/xml");
+        console.log(xmlDoc);
         // Passing the XML file to the populate functions
         populate.machineInfo(xmlDoc);
         populate.serviceInfo(xmlDoc);
@@ -20,6 +21,7 @@ populate.machineInfo = function(xml){
     var serial = $(xml).find('serial').text();
     var buildDate = $(xml).find('buildDate').text();
     var text =  "<tr><td>"+ type + "</td><td>" + model + "</td><td>" + serial + "</td><td>" + buildDate + "</td></tr>";
+    $('#machineinfo > tbody').html('');
     $('#machineinfo > tbody').html(text);
     $('#machineinfo').show();
 };
@@ -29,6 +31,7 @@ populate.serviceInfo = function(xml){
     var sdf = $(xml).find('sdf').text();
     var desc = $(xml).find('mSDFDesc').text();
     var text = "<tr><td>"+startDate+"</td><td>"+endDate+"</td><td>"+sdf+"</td></tr><tr><td colspan='3'>"+desc+"</td></tr>";
+    $('#warrantyinfo > tbody').html('');
     $('#warrantyinfo > tbody').html(text);
     $('#warrantyinfo').show();
     
@@ -39,6 +42,7 @@ populate.warrantyUpgrade = function(xml){
     var sdf = $(xml).find('mSDF').text();
     var desc = $(xml).find('sdfDesc').text();
     var text = "<tr><td>"+startDate+"</td><td>"+endDate+"</td><td>"+sdf+"</td></tr><tr><td colspan='3'>"+desc+"</td></tr>";
+    $('#warrantyupgrade > tbody').html('');
     $('#warrantyupgrade > tbody').html(text);
     $('#warrantyupgrade').show();
 };
@@ -51,6 +55,7 @@ populate.partsInfo = function(xml){
         var fruDesc = $(partInfoList[i]).find('fruDesc').text();
         text += "<tr><td>"+partNum+"</td><td>"+fruNum+"</td><td colspan='2'>"+fruDesc+"</td></tr>";
     }
+    $('#partsinfo > tbody').html('');
     $('#partsinfo > tbody').html(text);
     $('#partsinfo').show();
 };
@@ -62,6 +67,7 @@ populate.aodInfo = function(xml){
         var aodType = $(aodInfoList[i]).find('aodType').text();
         text += "<tr><td>"+aodType+"</td><td colspan='2'>"+aodDesc+"</td></tr>";
     }
+    $('#aodinfo > tbody').html('');
     $('#aodinfo > tbody').html(text);
     $('#aodinfo').show();
 };
@@ -79,6 +85,5 @@ function searchWarranty() {
     // validate fields
     // populate tables
     populate.allTables(mt,sn);
-    $('#search').addClass('disabled');
     return false;
 };
