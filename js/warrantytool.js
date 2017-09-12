@@ -13,6 +13,8 @@ populate.allTables = function(mt,sn){
         populate.warrantyUpgrade(xmlDoc);
         populate.partsInfo(xmlDoc);
         populate.aodInfo(xmlDoc);
+    }).done(function(){
+        $('.preloader-wrapper').hide();
     });
 };
 populate.machineInfo = function(xml){
@@ -29,7 +31,7 @@ populate.serviceInfo = function(xml){
     var startDate = $(xml).find('warstart').text();
     var endDate = $(xml).find('wed').text();
     var sdf = $(xml).find('sdf').text();
-    var desc = $(xml).find('mSDFDesc').text();
+    var desc = $(xml).find('sdfDesc').text();
     var text = "<tr><td>"+startDate+"</td><td>"+endDate+"</td><td>"+sdf+"</td></tr><tr><td colspan='3'>"+desc+"</td></tr>";
     $('#warrantyinfo > tbody').html('');
     $('#warrantyinfo > tbody').html(text);
@@ -40,7 +42,7 @@ populate.warrantyUpgrade = function(xml){
     var startDate = $(xml).find('mStartDate').text();
     var endDate = $(xml).find('mEndDate').text();
     var sdf = $(xml).find('mSDF').text();
-    var desc = $(xml).find('sdfDesc').text();
+    var desc = $(xml).find('mSDFDesc').text();
     var text = "<tr><td>"+startDate+"</td><td>"+endDate+"</td><td>"+sdf+"</td></tr><tr><td colspan='3'>"+desc+"</td></tr>";
     $('#warrantyupgrade > tbody').html('');
     $('#warrantyupgrade > tbody').html(text);
@@ -73,31 +75,11 @@ populate.aodInfo = function(xml){
 };
     
 
-
-var validate = {};
-validate.mt = function(mt){
-    var mtRegxp = /^([a-zA-Z0-9_-]){4}$/;
-    if (mt !== mtRegxp){
-        console.log("invalid mt");
-        return false;
-    }
-    return true;
-};
-validate.sn = function(sn){
-    var snRegxp = /^([a-zA-Z0-9_-]){7,8}$/;
-    if (sn !== snRegxp){
-        console.log("invalid sn");
-        return false;
-    }
-    return true;
-};
-
 // onsubmit function
 function searchWarranty() {
+    $('.preloader-wrapper').show();
     mt = $('#machineType').val();
     sn = $('#serialNumber').val();
-    validate.mt(mt);
-    validate.sn(sn);
     // populate tables
     populate.allTables(mt,sn);
     return false;

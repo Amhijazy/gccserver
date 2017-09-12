@@ -12,3 +12,9 @@ form{
 .info{
     display: none;
 }
+.preloader-wrapper{
+    display: block;
+    margin: 100px auto;
+    width: 30%;
+    display: none;
+}
