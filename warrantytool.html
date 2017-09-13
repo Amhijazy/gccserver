@@ -30,12 +30,11 @@
                       <input id="serialNumber" type="text">
                       <label for="serialNumber">Serial Number</label>
                   </div>
-                  <button type="submit" class="btn btn-large blue darken-1" id="search">Search</button>
+                  <button type="submit" class="btn btn-large blue darken-1" id="search">Search</button> 
               </form>
-              <br>
 
               <!-- Loader -->
-              
+
               <div class="preloader-wrapper big active">
                   <div class="spinner-layer spinner-blue-only">
                     <div class="circle-clipper left">
@@ -48,97 +47,122 @@
                   </div>
                 </div>
 
-              <!-- machine info table-->
+                <!-- The collapsible ul element -->
 
-              <table class="striped info" id="machineinfo">
-                <thead>
-                  <tr>
-                    <th colspan ="4" class="table-heading">General machine information</th>
-                  </tr>
-                  <tr>
-                      <th>Type</th>
-                      <th>Model</th>
-                      <th>Serial</th>
-                      <th>Build date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                </tbody>
-              </table>
-              <br>
-
-              <!-- warranty and service info table-->
-
-              <table class="striped info" id="warrantyinfo">
-                <thead>
-                  <tr>
-                    <th colspan="3" class="table-heading">Warranty and Service Information</th>
-                  </tr>
-                  <tr>
-                      <th>Start Date</th>
-                      <th>End Date</th>
-                      <th>SDF</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                </tbody>
-              </table>
-              <br>
-
-              <!-- warranty upgrade table-->
-
-              <table class="striped info" id="warrantyupgrade">
-                <thead>
-                  <tr>
-                    <th colspan="3" class="table-heading">Warranty Upgrades and Maintenance Agreements</th>
-                  </tr>
-                  <tr>
-                      <th>Start Date</th>
-                      <th>End Date</th>
-                      <th>SDF</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                </tbody>
-              </table>
-              <br>
-
-              <!-- parts information info table-->
-
-              <table class="striped info" id="partsinfo">
-                <thead>
-                  <tr>
-                    <th colspan="4" class="table-heading">Parts Information</th>
-                  </tr>
-                  <tr>
-                      <th>Part Number</th>
-                      <th>FRU Number</th>
-                      <th colspan="2">FRU Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                </tbody>
-              </table>
-              <br>
-
-              <!-- AOD info table-->
-
-              <table class="striped info" id="aodinfo">
-                <thead>
-                  <tr>
-                    <th colspan="4" class="table-heading">AOD Info</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                </tbody>
-              </table>
-
+              <ul class="collapsible info" data-collapsible="expandable">
+                <li id="machineinfo" class="info"> <!-- machine info table-->
+                  <div class="collapsible-header table-heading active">
+                    <p>General machine information</p>
+                  </div>
+                  <div class="collapsible-body">
+                      <table class="striped">
+                        <thead>
+                          <tr>
+                            <th>Type</th>
+                            <th>Model</th>
+                            <th>Serial</th>
+                            <th>Build date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                      </table>
+                  </div>
+                </li>
+                <li id="warrantyinfo" class="info"> <!-- warranty and service info table-->
+                  <div class="collapsible-header table-heading active">
+                    <p>Warranty and Service Information</p>
+                  </div>
+                  <div class="collapsible-body">
+                    <table class="striped" >
+                        <thead>
+                          <tr>
+                              <th>Start Date</th>
+                              <th>End Date</th>
+                              <th>SDF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                      </table>
+                  </div>
+                </li>
+                <li id="warrantyupgrade" class="info"> <!-- warranty upgrade table-->
+                    <div class="collapsible-header table-heading active">
+                      <p>Warranty Upgrades and Maintenance Agreements</p>
+                    </div>
+                    <div class="collapsible-body">
+                      <table class="striped" >
+                          <thead>
+                            <tr>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>SDF</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            
+                          </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li id="additionalContacts" class="info"> <!-- new warranty -->
+                  <div class="collapsible-header table-heading active">
+                    <p>Additional Contracts</p>
+                  </div>
+                  <div class="collapsible-body">
+                    <table class="striped" >
+                        <thead>
+                          <tr>
+                              <th>Id</th>
+                              <th>Type</th>
+                              <th>SLA</th>
+                              <th>Start Date</th>
+                              <th>End Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                      </table>
+                  </div>
+                </li>
+                <li id="partsinfo" class="info"> <!-- parts information info table-->
+                  <div class="collapsible-header table-heading active">
+                      <p>Parts Information</p>
+                    </div>
+                    <div class="collapsible-body">
+                      <table class="striped" >
+                          <thead>
+                            <tr>
+                                <th>Part Number</th>
+                                <th>FRU Number</th>
+                                <th colspan="2">FRU Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            
+                          </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li id="aodinfo" class="info"> <!-- AOD info table-->
+                  <div class="collapsible-header table-heading active">
+                      <p>AOD Info</p>
+                    </div>
+                    <div class="collapsible-body">
+                      <table class="striped">
+                          <tbody>
+                            
+                          </tbody>
+                        </table>
+                    </div>
+                </li>
+              </ul>
             </div>
+            <p class="info">Machine type and serial number not found.</p>
         </div>
 
     </div>

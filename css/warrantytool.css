@@ -7,7 +7,7 @@ form{
     margin: 20px auto;
 }
 .table-heading{
-    background-color: rgba(30,136,229,0.5);
+    background-color: rgba(30, 135, 229, 0.50);
 }
 .info{
     display: none;
@@ -18,3 +18,8 @@ form{
     width: 30%;
     display: none;
 }
+/*
+ul.collapsible li{
+    margin-bottom: 30px;
+}
+*/
