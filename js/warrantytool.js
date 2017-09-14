@@ -10,7 +10,7 @@ populate.allTables = function(mt,sn){
         if($(xmlDoc).find('[type=error]').length){
             console.log($(xmlDoc).find('[type=error]').text());
             $('.collapsible').hide();
-            $('p.info').show();
+            Materialize.toast('Machine type and serial number not found.', 4000)
         } else{
             // Passing the XML file to the populate functions
             populate.machineInfo(xmlDoc);
@@ -24,6 +24,8 @@ populate.allTables = function(mt,sn){
     }).done(function(){ 
         // Removing the loading animation once the get request is done
         $('.preloader-wrapper').hide();
+    }).fail(function(){
+
     });
     // Get JSON file with mt & sn
     var jsonurl = 'assets/php/getLenovoWar.php?mt=' + mt + '&sn=' + sn;

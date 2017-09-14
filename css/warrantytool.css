@@ -18,6 +18,12 @@ form{
     width: 30%;
     display: none;
 }
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 85%;
+    left:70%;
+}
 /*
 ul.collapsible li{
     margin-bottom: 30px;
