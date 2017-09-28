@@ -2,3 +2,22 @@
     width: 95%;
     margin: 50px auto;
 }
+table{
+    margin-bottom: 20px;
+}
+h5{
+    margin: 20px auto;
+}
+#edit{
+    float: right;
+}
+.material-icons{
+    cursor: pointer;
+}
+.material-icons:hover{
+    color: #1e88e5;
+}
+.modal{
+    width: 40%;
+    overflow: visible;
+}

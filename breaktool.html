@@ -18,7 +18,104 @@
         <div class="card card-large">
             <div class="card-content">
               
-              <p>Break tool</p>
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs">
+                    <li class="tab col s4"><a href="#lvl1" class="active" >Level 1 Break</a></li>
+                    <li class="tab col s4"><a href="#lvl2">Level 2 Break</a></li>
+                    <li class="tab col s4"><a href="#tl">Team Leaders Break</a></li>
+                  </ul>
+                </div>
+
+                <!-- Agents on break table -->
+
+                <div id="lvl1" class="col s12">
+                  <h5>Agents on break:</h5>
+                  <table class="striped bordered">
+                    <thead>
+                      <tr>
+                        <th>Agent</th>
+                        <th>Time</th>
+                        <th>Aux</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- pop.onBreak() -->
+                    </tbody>
+                  </table>
+
+                  <!-- Available slots -->
+
+                  <h5>Available slots:</h5>
+                  <div id="slots">
+                      <!-- pop.breakSlots() -->
+                  </div>
+                  <button data-target="editSlots" id="edit" class="btn btn-large blue darken-1 modal-trigger">Edit slots</button>
+                </div>
+                <div id="lvl2" class="col s12">Lvl2Break</div>
+                <div id="tl" class="col s12">TLBreak</div>
+              </div>
+
+              <!-- Edit slots modal -->
+
+              <div id="editSlots" class="modal card">
+                <div class="card-content">
+                  <h5>Edit slots:</h5>
+                    <form action="" onsubmit="">
+                      <div class="input-field col s12">
+                        <select>
+                          <option value="" disabled selected>Choose number of slots</option>
+                          <option value="1">4 slots (60,30,15,15)</option>
+                          <option value="2">3 slots (60,30,15)</option>
+                          <option value="3">2 slots (15,15)</option>
+                          <option value="4">1 slot (15)</option>
+                          <option value="5">Manual</option>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                    </form>
+                </div>
+              </div>
+
+              <!-- Take break modal -->
+
+              <div id="30" class="modal card">
+                <div class="card-content">
+                  <h5>Take 30 minutes slot:</h5>
+                  <form action="" onsubmit="javascript:arken('30');return false;">
+                    <div class="input-field col s12">
+                      <input type="text" class="autocomplete agentname" required autocomplete="off">
+                      <label for="agentName">Agent name</label>
+                    </div>
+                    <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                  </form>
+                </div>
+              </div>
+              <div id="60" class="modal card">
+                <div class="card-content">
+                  <h5>Take 60 minutes slot:</h5>
+                  <form action="" onsubmit="javascript:arken('60');return false;">
+                    <div class="input-field col s12">
+                      <input type="text" class="autocomplete agentname" required autocomplete="off">
+                      <label for="agentName">Agent name</label>
+                    </div>
+                    <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                  </form>
+                </div>
+              </div>
+              <div id="15" class="modal card">
+                <div class="card-content">
+                  <h5>Take 15 minutes slot:</h5>
+                  <form action="" onsubmit="javascript:arken('15');return false;">
+                    <div class="input-field col s12">
+                      <input type="text" class="autocomplete agentname" required autocomplete="off">
+                      <label for="agentName">Agent name</label>
+                    </div>
+                    <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                  </form>
+                </div>
+              </div>
 
             </div>
         </div>

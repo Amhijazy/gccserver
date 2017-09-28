@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-    populatelinks('assets/jsonfiles/quicklinks.json');
+    populatelinks('assets/json/quicklinks.json');
 });
 
 function populatelinks(url){
