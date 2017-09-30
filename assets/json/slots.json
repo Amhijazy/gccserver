@@ -1,14 +1,1 @@
-[
-    {
-        "length" : "30",
-        "taken" : false
-    },
-    {
-        "length" : "60",
-        "taken" : false
-    },
-    {
-        "length" : "15",
-        "taken" : true
-    }
-]
+[{"length":"15","taken":false,"available":true},{"length":"15","taken":false,"available":true},{"length":"30","taken":false,"available":true},{"length":"60","taken":false,"available":true}]

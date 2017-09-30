@@ -8,9 +8,6 @@ table{
 h5{
     margin: 20px auto;
 }
-#edit{
-    float: right;
-}
 .material-icons{
     cursor: pointer;
 }
@@ -19,5 +16,13 @@ h5{
 }
 .modal{
     width: 40%;
+    height: 50%;
     overflow: visible;
+}
+iframe{
+    width: 90%;
+    margin: auto;
+    overflow: visible;
+    display: block;
+    height: 1200px;
 }

@@ -51,10 +51,29 @@
                   <div id="slots">
                       <!-- pop.breakSlots() -->
                   </div>
-                  <button data-target="editSlots" id="edit" class="btn btn-large blue darken-1 modal-trigger">Edit slots</button>
+                  <button data-target="admin" id="edit" class="btn btn-large blue darken-1 modal-trigger right">Edit slots</button>
                 </div>
                 <div id="lvl2" class="col s12">Lvl2Break</div>
                 <div id="tl" class="col s12">TLBreak</div>
+              </div>
+
+              <!-- Admin modal -->
+
+              <div id="admin" class="modal card">
+                <div class="card-content">
+                  <h5>Enter credentials:</h5>
+                    <form action="" onsubmit="">
+                      <div class="input-field">
+                        <input id="username" type="text" required autocomplete="off">
+                        <label for="first_name">User Name</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="password" type="password" required autocomplete="off">
+                        <label for="password">Password</label>
+                      </div>
+                      <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                    </form>
+                </div>
               </div>
 
               <!-- Edit slots modal -->
@@ -78,46 +97,47 @@
                 </div>
               </div>
 
-              <!-- Take break modal -->
+              <!-- Take break modals -->
 
               <div id="30" class="modal card">
                 <div class="card-content">
                   <h5>Take 30 minutes slot:</h5>
-                  <form action="" onsubmit="javascript:arken('30');return false;">
-                    <div class="input-field col s12">
+                  <form class="row" action="" onsubmit="javascript:arken('30');return false;">
+                    <div class="input-field col s8">
                       <input type="text" class="autocomplete agentname" required autocomplete="off">
                       <label for="agentName">Agent name</label>
                     </div>
-                    <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                    <button type="submit" class="btn btn-large blue darken-1 col s4">Submit</button>
                   </form>
                 </div>
               </div>
               <div id="60" class="modal card">
                 <div class="card-content">
                   <h5>Take 60 minutes slot:</h5>
-                  <form action="" onsubmit="javascript:arken('60');return false;">
-                    <div class="input-field col s12">
+                  <form class = "row" action="" onsubmit="javascript:arken('60');return false;">
+                    <div class="input-field col s8">
                       <input type="text" class="autocomplete agentname" required autocomplete="off">
                       <label for="agentName">Agent name</label>
                     </div>
-                    <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                    <button type="submit" class="btn btn-large blue darken-1 col s4">Submit</button>
                   </form>
                 </div>
               </div>
               <div id="15" class="modal card">
                 <div class="card-content">
                   <h5>Take 15 minutes slot:</h5>
-                  <form action="" onsubmit="javascript:arken('15');return false;">
-                    <div class="input-field col s12">
+                  <form class="row" action="" onsubmit="javascript:arken('15');return false;">
+                    <div class="input-field col s8">
                       <input type="text" class="autocomplete agentname" required autocomplete="off">
                       <label for="agentName">Agent name</label>
                     </div>
-                    <button type="submit" class="btn btn-large blue darken-1">Submit</button>
+                    <button type="submit" class="btn btn-large blue darken-1 col s4">Submit</button>
                   </form>
                 </div>
               </div>
 
             </div>
+            <iframe src="https://alcatraz.nadsc.ibm.com/webacdhw/3499_gcc.html"></iframe>
         </div>
 
     </div>
