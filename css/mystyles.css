@@ -1,7 +1,10 @@
+body {
+  background-image: url("../assets/img/background.jpg");
+}
 .nav-wrapper{
   padding: 30px 30px;
 }
-.nav-wrapper a{
+.nav-wrapper li a{
   font-size: 35px;
   margin-left: 50px;
 }

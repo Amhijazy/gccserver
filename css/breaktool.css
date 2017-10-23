@@ -16,7 +16,7 @@ h5{
 }
 .modal{
     width: 40%;
-    height: 50%;
+    /*height: 50%;*/
     overflow: visible;
 }
 iframe{
@@ -25,4 +25,7 @@ iframe{
     overflow: visible;
     display: block;
     height: 1200px;
+}
+select{
+    display: inline-block;
 }
