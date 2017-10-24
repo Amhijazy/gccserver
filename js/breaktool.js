@@ -72,7 +72,7 @@ var lvl1AgentNames = {
     "Saeed": null,
     "Rania": null,
     "Samer": null,
-    "Kilany": null,
+    "Hady": null,
     "Anas": null,
     "Jerome": null,
     "Michael": null,
@@ -81,6 +81,9 @@ var lvl1AgentNames = {
     "Behairy": null,
     "Osman": null,
     "Tarek": null,
+    "Zakaria": null,
+    "Hosney": null,
+    "Soha": null,
     "Fawal": null
 };
 

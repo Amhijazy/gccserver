@@ -2,7 +2,6 @@
 
 //$slots = ["15","15"];
 $slots = $_POST["slots"];
-$GLOBALS['maxSlots'] = $_POST['maxSlots'];
 $newSlots = "[";
 foreach ($slots as $slot) {
     $newSlots .= '{
@@ -13,15 +12,23 @@ foreach ($slots as $slot) {
 $newSlots = rtrim($newSlots,", ");
 $newSlots .=']';
 $slotsjson = json_decode($newSlots);
+$slotCount = count($slotsjson); // slot cound set by admin
 if($data = json_decode(file_get_contents("../json/inBreak.json"))){
-    foreach ($data as $agent) {
-        foreach($slotsjson as $slot){
-            if($agent->length == $slot->length){
-                if(!$slot->taken){
-                    $slot->taken = true;
-                    break;
+    $inBreakCount = count($data); // number of agents on break
+    if($inBreakCount < $slotCount){
+        foreach ($data as $agent) {
+            foreach($slotsjson as $slot){
+                if($agent->length == $slot->length){
+                    if(!$slot->taken){
+                        $slot->taken = true;
+                        break;
+                    }
                 }
-            }
+            }  
+        }
+    } else {
+        foreach($slotsjson as $slot){
+            $slot->taken = true;
         }  
     }
 } 
