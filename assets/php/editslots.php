@@ -1,7 +1,8 @@
 <?php
 
-//$slots = ["60","15"];
+//$slots = ["15","15"];
 $slots = $_POST["slots"];
+$GLOBALS['maxSlots'] = $_POST['maxSlots'];
 $newSlots = "[";
 foreach ($slots as $slot) {
     $newSlots .= '{
@@ -16,8 +17,10 @@ if($data = json_decode(file_get_contents("../json/inBreak.json"))){
     foreach ($data as $agent) {
         foreach($slotsjson as $slot){
             if($agent->length == $slot->length){
-                $slot->taken = true;
-                break;
+                if(!$slot->taken){
+                    $slot->taken = true;
+                    break;
+                }
             }
         }  
     }

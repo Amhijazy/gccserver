@@ -68,8 +68,19 @@ var lvl1AgentNames = {
     "Hijazy": null,
     "Wahba": null,
     "Aziz": null,
-    "Ramy": null,
+    "Nabil": null,
     "Saeed": null,
+    "Rania": null,
+    "Samer": null,
+    "Kilany": null,
+    "Anas": null,
+    "Jerome": null,
+    "Michael": null,
+    "Naqib": null,
+    "Raafat": null,
+    "Behairy": null,
+    "Osman": null,
+    "Tarek": null,
     "Fawal": null
 };
 
@@ -255,11 +266,12 @@ action.editSlots = function(){
     $('#slotSelectors').children('select').each(function(i,child){
         slots.push(child.value);
     });
-    console.log(slots);
+    //console.log(slots);
     $.post(
         "assets/php/editslots.php",
         {
-            slots : slots
+            slots : slots,
+            maxSlots : slots.length
         }
     ).done(function(data){
         Materialize.toast(data, 4000)
